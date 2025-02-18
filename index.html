@@ -1,64 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="it">
 <head>
-    <title>Countdown to a Date</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4 Anna</title>
     <style>
-        /* Style for the countdown */
-        #countdown {
-            font-size: 2em;
-            color: black;
-        }
-
-        /* Style for the message after the countdown ends */
-        #message {
-            display: none; /* Hide by default */
-            color: red; /* Custom color */
-            font-size: 3em; /* Larger text size */
-            font-weight: bold; /* Make it bold */
-            text-transform: uppercase; /* Uppercase letters */
-            text-shadow: 4px 4px 6px black; /* Shadow effect */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
         }
     </style>
 </head>
-
 <body>
-
-    <h1 id="countdown"></h1>
-    <p id="message">🎉 Time's up! 🎊</p>
-
-    <script>
-        // Set the target date (YYYY-MM-DD format)
-        const targetDate = new Date("2025-12-31T23:59:59").getTime();
-
-        // Get countdown and message elements
-        const countdownElement = document.getElementById('countdown');
-        const messageElement = document.getElementById('message');
-
-        // Update the countdown every second
-        const timer = setInterval(() => {
-            const now = new Date().getTime();
-            const timeLeft = targetDate - now;
-
-            // When the countdown reaches zero
-            if (timeLeft <= 0) {
-                clearInterval(timer); // Stop the timer
-                countdownElement.style.display = 'none'; // Hide countdown
-                messageElement.style.display = 'block'; // Show message
-                return;
-            }
-
-            // Calculate time units
-            const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
-
-            // Display the countdown
-            countdownElement.textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
-        }, 1000);
-    </script>
-
+    <h1>Happy Valentine's</h1>
+    <p> As you can probably tell by the way I'm delivering this "letter" I'm a computer science student here at ewu. Our eyes have met a couple of times and I hope you'll recall that once I tell you who I am.<br>
+    I've noticed your beauty straight away but I honestly just couldn't bring myself to talk to you, so I figured out this would be the perfect time to reach out. After some digging I found out that you're an international athlete, which only made you more interesting.<br>
+    I'm a sophomore and since I've been here at eastern I've never gotten caught up with someone this quickly and with such few interactions, although I've always had a soft spot for athletes.<br>
+    So, you're probably still wondering who's the nerd who coded a whole QR code just cause he couldn't talk to you, aren't you?<br>
+    Well, just click the button below.<br>
+    <button onclick="document.location='https://johsecret.github.io/veralettera/'">Keep reading</button></p>
 </body>
-
 </html>
